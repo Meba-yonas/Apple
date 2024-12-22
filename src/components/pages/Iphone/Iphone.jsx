@@ -5,7 +5,7 @@ const Iphone = () => {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:3000/iphones")
+		fetch("https://apple-hmje.onrender.com/iphones")
 			.then((res) => res.json())
 			.then((data) => {
 				setProducts(data.products);

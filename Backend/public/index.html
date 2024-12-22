@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Product</title>
+		<style>
+			body {
+				font-family: "Poppins", sans-serif;
+				background-color: #e0e0e0;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+				text-align: center;
+			}
+			form {
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 10px;
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				padding: 20px;
+				width: 50%;
+				max-width: 400px;
+				margin: auto;
+			}
+			h1 {
+				text-align: center;
+				color: #333;
+				margin-bottom: 20px;
+			}
+			label {
+				display: block;
+				margin-bottom: 10px;
+				color: #555;
+			}
+			input[type="text"] {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 0px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				box-sizing: border-box;
+			}
+			button {
+				width: 100%;
+				padding: 12px;
+				background-color: #007bff;
+				border: none;
+				border-radius: 4px;
+				color: white;
+				font-size: 16px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			button:hover {
+				background-color: #0056b3;
+			}
+			@media (max-width: 600px) {
+				form {
+					padding: 15px;
+				}
+				input[type="text"] {
+					padding: 8px;
+				}
+				button {
+					padding: 10px;
+					font-size: 14px;
+				}
+			}
+		</style>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h1>Add a New Product</h1>
+		<form action="/insertData" method="post">
+			<label for="product_id">Product ID:</label>
+			<input
+				type="text"
+				id="product_id"
+				name="product_id"
+				required
+			/><br /><br />
+
+			<label for="product_name">Product Name:</label>
+			<input
+				type="text"
+				id="product_name"
+				name="product_name"
+				required
+			/><br /><br />
+
+			<label for="product_url">Product URL:</label>
+			<input
+				type="text"
+				id="product_url"
+				name="product_url"
+				required
+			/><br /><br />
+
+			<label for="price_id">Price ID:</label>
+			<input type="text" id="price_id" name="price_id" required /><br /><br />
+
+			<label for="price_range">Price Range:</label>
+			<input
+				type="text"
+				id="price_range"
+				name="price_range"
+				required
+			/><br /><br />
+
+			<label for="starting_price">Starting Price:</label>
+			<input
+				type="text"
+				id="starting_price"
+				name="starting_price"
+				required
+			/><br /><br />
+
+			<label for="description_id">Description ID:</label>
+			<input
+				type="text"
+				id="description_id"
+				name="description_id"
+				required
+			/><br /><br />
+
+			<label for="product_brief_description">Brief Description:</label>
+			<input
+				type="text"
+				id="product_brief_description"
+				name="product_brief_description"
+				required
+			/><br /><br />
+
+			<label for="product_image">Product Image URL:</label>
+			<input
+				type="text"
+				id="product_image"
+				name="product_image"
+				required
+			/><br /><br />
+
+			<label for="product_link">Product Link:</label>
+			<input
+				type="text"
+				id="product_link"
+				name="product_link"
+				required
+			/><br /><br />
+
+			<button type="submit">Add Product</button>
+		</form>
+        <script>
+        function fetchIphones() {
+            fetch('http://localhost:3000/iphones')
+                .then(response => response.json())
+                .then(data => {
+                    let iphonesDiv = document.getElementById('iphones');
+                    iphonesDiv.innerHTML = JSON.stringify(data, null, 2);
+                });
+        }
+    </script>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+
+
+### Fetch Videos from YouTube API
+### Fetch Videos from YouTube API
+GET https://www.googleapis.com/youtube/v3/search?key=AIzaSyCzQ7x17--3eO97UHd821JRqSrETHaYaG4&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9
+
+	
